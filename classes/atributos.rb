@@ -19,7 +19,7 @@ class Dog
 end
 
 dog = Dog.new
-dog = 'Marlon'
+dog.name = 'Marlon'
 puts dog.name
 
 dog.age = '1 ano'
