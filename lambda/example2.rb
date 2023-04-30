@@ -4,8 +4,11 @@ my_lambda.call(numbers)
 puts '-------------------------'
 
 my_lambda = -> (numbers) {
+  sum = 0
   numbers.each do |number|
-    puts number**2 
+    value = number**2
+    sum += value
+    puts "value: #{value}, sum: #{sum}"
   end
 }
 my_lambda.call(numbers)
