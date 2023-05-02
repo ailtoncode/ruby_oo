@@ -1,36 +1,36 @@
 module Calcular
-  def self.setup(formatter)
-    @formatter = formatter
-  end
+  class Operations
+    def initialize(formatter)
+      @formatter = formatter
+    end
 
-  def self.sum(v1, v2)
-    self.puts(v1 + v2, @formatter)
-  end
+    def sum(v1, v2)
+      Operations.puts(v1 + v2, @formatter)
+    end
 
-  def self.subt(v1, v2)
-    self.puts(v1 + v2, @formatter)
-  end
+    def subt(v1, v2)
+      Operations.puts(v1 - v2, @formatter)
+    end
 
-  def self.mult(v1, v2)
-    self.puts(v1 + v2, @formatter)
-  end
+    def mult(v1, v2)
+      Operations.puts(v1 * v2, @formatter)
+    end
 
-  def self.div(v1, v2)
-    self.puts(v1 + v2, @formatter)
-  end
+    def div(v1, v2)
+      Operations.puts(v1 / v2, @formatter)
+    end
 
-  
-  def self.puts (result, lambda)
-    lambda.call(result)
-  end
-  
-  private_class_method :puts
+    private
 
+    def self.puts (result, lambda)
+      lambda.call(result)
+    end
+  end
 end
 
 resultado_formatado = -> (value){ puts "Resultado: #{value}" }
-Calcular::setup(resultado_formatado)
-Calcular::sum(10, 5)
-Calcular::subt(32, 3)
-Calcular::mult(5, 5)
-Calcular::div(50, 5)
+calcular = Calcular::Operations.new(resultado_formatado)
+calcular.sum(10, 5)
+calcular.subt(32, 3)
+calcular.mult(5, 5)
+calcular.div(50, 5)
