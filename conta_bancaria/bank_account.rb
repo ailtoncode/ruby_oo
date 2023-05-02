@@ -1,6 +1,6 @@
 module Bank
   class BankAcount
-    attr_reader :balance
+    attr_reader :balance, :holder
 
     def initialize(balance, holder)
         @balance = balance
