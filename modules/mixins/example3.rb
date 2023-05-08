@@ -1,12 +1,11 @@
-module SortLetters
-  def sort text
-    puts text.chars.sort.join
-  end
-end
+require_relative 'sort_letters'
 
 class Sorting
   include SortLetters
+
+  def initialize text
+    puts sort text
+  end
 end
 
-sorting = Sorting.new
-sorting.sort "gdhstrhdfas"
+sorting = Sorting.new "xgdhstrhdfaisww"
