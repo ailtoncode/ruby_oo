@@ -1,8 +1,4 @@
-module SortLetters
-  def sort text
-    puts text.chars.sort.join
-  end
-end
+require_relative 'sort_letters'
 
 class Sorting
   include SortLetters
@@ -12,4 +8,4 @@ class Sorting
   end
 end
 
-sorting = Sorting.new "gdhstrhdfais"
+sorting = Sorting.new "xgdhstrhdfaisww"
