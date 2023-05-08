@@ -6,7 +6,10 @@ end
 
 class Sorting
   include SortLetters
+
+  def initialize text
+    puts sort text
+  end
 end
 
-sorting = Sorting.new
-sorting.sort "gdhstrhdfas"
+sorting = Sorting.new "gdhstrhdfais"
