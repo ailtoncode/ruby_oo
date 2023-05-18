@@ -1,4 +1,4 @@
-string = "As expressões regulares são amplamente utilizadas"
+string = "As expressões regulares são amplamente amplamente utilizadas"
 literal = "amplamente"
 pattern = %r{#{literal}}
 position = string =~ pattern
